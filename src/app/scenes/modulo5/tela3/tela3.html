@@ -1,0 +1,69 @@
+<div class="tela mod5tela3">
+
+  <section class="screen screen-0 flex no-mobile-flex bg-{{vm.currentItem[0]}}">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div class="row">
+            <div class="col-sm-4 col-sm-offset-2">
+
+              <div class="items">
+
+                <div class="items-content">
+
+                  <div class="black box-normal item" ng-if="vm.currentItem[0] === 0">
+                    <p class="bold uppercase">2. Características</p>
+                    <p class="mt-05">Os recursos obtidos pelo consumidor com o CDC são utilizados, geralmente, para a
+                      aquisição de bens duráveis novos ou usados (veículos, eletrodomésticos, equipamentos de
+                      informática e outros) ou para pagamento de serviços </p>
+                  </div>
+
+                  <div class="black box-normal item" ng-if="vm.currentItem[0] === 1">
+                    <p>O prazo para pagamento das parcelas varia de acordo com a política de crédito de cada instituição
+                      de crédito, e ainda pode contar com um prazo de carência para o pagamento da primeira parcela.</p>
+                    <p>A vantagem é que o contratante passa a possuir o bem no ato da compra, sem precisar ter pago o
+                      valor total</p>
+                    <p>As taxas de juros costumam ser menores do que os do cheque especial ou dos cartões de crédito.
+                    </p>
+                  </div>
+
+                  <div class="black box-normal item" ng-if="vm.currentItem[0] === 2">
+                    <div>
+                      <p>No CDC, é possível realizar a liquidação antecipada das parcelas, com redução proporcional os juros e demais encargos</p>
+                    </div>
+                  </div>
+
+                </div>
+
+
+                <div class="click-items">
+                  <div class="click-item" ng-click="vm.select(0,0)"
+                    ng-class="{completed: vm.items[0][0], current: vm.currentItem[0] === 0}"></div>
+                  <div class="click-item" ng-click="vm.select(0,1)"
+                    ng-class="{completed: vm.items[0][1], current: vm.currentItem[0] === 1}"></div>
+                  <div class="click-item" ng-click="vm.select(0,2)"
+                    ng-class="{completed: vm.items[0][2], current: vm.currentItem[0] === 2}"></div>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="nav-buttons">
+    <div class="nav-button prev" ng-click="vm.game.prev()">
+      <img src="assets/images/mod5/botoes/botao_azul_voltar.png" alt="">
+    </div>
+    <div class="nav-button next" ng-click="vm.game.next()" ng-if="vm.game.screenFinished()">
+      <img src="assets/images/mod5/botoes/botao_azul_avancar.png" alt="">
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,295 @@
+.moldura-container
+  position absolute
+  left 0px
+  top 0px
+  width 100%
+
+  .moldura
+    position absolute
+    left 0px
+    top 0px
+    width 100%
+    height 0px
+    //background url(../assets/images/default/index/index_0001.png) no-repeat
+    z-index 300
+
+    &.grey
+      //background url(../assets/images/default/index/index_0002.png) no-repeat
+
+    .btn-fechar
+      position absolute
+      right 0px
+      top 40px
+
+    .btn-mapa
+      position absolute
+      right 5px
+      top 5px
+      cursor pointer
+
+    .btn-menu
+      position absolute
+      right 0px
+      top 0px
+      cursor pointer
+
+    .btn-help
+      position absolute
+      right 0px
+      top 55px
+      cursor pointer
+
+    .next-btn
+      position fixed
+      right 1rem
+      top calc(50% + 8px)
+      transform translateY(-50%)
+      width auto
+      height auto
+
+      img
+        width auto
+        max-height 3rem
+
+    .prev-btn
+      position fixed
+      left 1rem
+      top calc(50% + 8px)
+      transform translateY(-50%)
+      width auto
+      height auto
+
+      img
+        width auto
+        max-height 3rem
+        //transform scaleX(-1)
+
+  .askmap-screen
+    position absolute
+    left 0px
+    top 0px
+    width 1920px
+    height 1080px
+    z-index 1000
+    transform-origin center top
+    background rgba(0,0,0,0.7)
+
+    &.ng-hide-add
+      animation 0.3s hideAsk
+    &.ng-hide-remove
+      animation 0.3s showAsk
+
+    .btn
+      position relative
+      padding 15px
+      background #ec9b00
+      border 5px solid #fff
+      border-radius 10px
+      color #fff
+      font-size 32px
+      font-weight 300
+      transition 0.2s background
+      width 160px
+      line-height 32px
+
+      .btn-inside
+        display inline-block
+        vertical-align top
+        margin-right 0
+
+        p
+          margin 0
+
+      &:hover
+        background #fac600
+
+  .help-screen
+    position absolute
+    left 0px
+    top 0px
+    width 1920px
+    height 1080px
+    z-index 200
+
+    &.ng-hide-add
+      animation 0.4s fadeOut
+    &.ng-hide-remove
+      animation 0.4s fadeIn
+
+  .menu
+    position absolute
+    left 0px
+    top 0px
+    width 1920px
+    height 1080px
+    z-index 310
+
+    .menu-background
+      position absolute
+      left 0px
+      top 0px
+      width 100%
+      height 100%
+      background rgba(0,0,0,0.8)
+
+    .menu-container
+      position absolute
+      left 0px
+      top 0px
+      width 100%
+      height 100%
+      background url(../assets/images/default/menu/menu_0002.png)
+
+      .left-bar
+        position absolute
+        left 350px
+        top 0px
+        width 60px
+        height 100%
+        background #2b479b
+
+        .menu-bottom
+          position absolute
+          width 60px
+          left 0px
+          bottom 0px
+
+          p
+            font-size 16px
+            color white
+            font-weight 100
+            margin 0
+            padding 0
+            width 100%
+            text-align center
+            margin-bottom 15px
+
+            span
+              font-weight 700
+
+      .menu-content
+        position absolute
+        left 338px
+        top 80px
+        width 544px
+        height auto
+
+        .menu-item
+          position relative
+          width 100%
+          padding 10px 0
+          border-radius 20px
+
+          .item-mark
+            position relative
+            display inline-block
+            vertical-align middle
+            width 15px
+            height 15px
+            border-radius 50%
+            background white
+            margin-left 35px
+            margin-right 35px
+
+          .item-title
+            font-size 20px
+            color rgba(255,255,255,0.6)
+            font-weight 100
+
+          &.completed
+            .item-title
+              color white
+
+          &.current
+            background white
+
+            .item-mark
+              background #2b479b
+
+            .item-title
+              color #2b479b
+
+    &.ng-hide-remove
+      animation 0.3s doNothing
+
+      .menu-background
+        animation 0.2s fadeIn
+        animation-fill-mode forwards
+
+      .menu-container
+        animation 0.3s showMenu
+        animation-fill-mode forwards
+
+    &.ng-hide-add
+      animation 0.3s hidelAll
+
+      .menu-background
+        animation 0.2s fadeOut
+        animation-fill-mode forwards
+
+      .menu-container
+        animation 0.3s hideMenu
+        animation-fill-mode forwards
+
+
+  @media screen and (max-width: 768px)
+    .moldura
+      .next-btn
+        transform translateX(28%) translateY(28%)
+
+      .prev-btn
+        transform translateX(-28%) translateY(28%)
+
+  @media screen and (orientation:portrait)
+
+    .moldura
+
+      .next-btn
+        position fixed
+        right 0
+        top calc(100%)
+        transform translateY(-100%)
+
+      .prev-btn
+        position fixed
+        left 0
+        top calc(100%)
+        transform translateY(-100%)
+
+@keyframes showAsk
+  0%
+    transform scaleY(0)
+  100%
+    transform scaleY(1)
+
+@keyframes hideAsk
+  0%
+    transform scaleY(1)
+  100%
+    transform scaleY(0)
+
+@keyframes showMenu
+  0%
+    transform translateX(100%)
+  100%
+    transform translateX(0)
+
+@keyframes hideMenu
+  0%
+    transform translateX(0)
+  100%
+    transform translateX(100%)
+
+@keyframes doNothing
+  0%
+    transform translateX(0)
+  100%
+    transform translateX(0)
+
+@keyframes hideAll
+  0%
+    opacity 1
+  98%
+    opacity 1
+  100%
+    opacity 0

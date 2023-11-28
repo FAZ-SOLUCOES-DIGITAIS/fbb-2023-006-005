@@ -1,0 +1,35 @@
+.tela.mod5tela1
+  position relative
+  min-height 100%
+  width 100%
+  height 100% /* cross-browser */
+  height calc(100 * var(--vh))
+  overflow hidden
+
+
+  .screen
+    &.screen-0
+      background url('../assets/images/mod5/imagens/imagem_01.png')
+      background-color #000
+      background-size contain
+      background-position right top
+      background-repeat no-repeat
+      padding 0
+      //background #000
+
+      &:before
+        content ""
+        position absolute
+        left 0
+        top 0
+        width 15%//calc((100% / 12) * 1)
+        height calc(100%)
+        background url(../assets/images/mod5/grafismos/grafismo_01.png)
+        background-size contain
+        background-position left top
+        background-repeat no-repeat
+        pointer-events none
+
+@media only screen and (orientation:portrait)
+  .tela.mod5tela1
+    position relative

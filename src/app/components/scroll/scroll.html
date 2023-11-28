@@ -1,0 +1,10 @@
+<div class="scroll">
+  <div class="scroll-content" ng-style="vm.scrollStyle" ng-transclude></div>
+  <div class="scroll-bar" ng-show="vm.showScrollbar" ng-style="vm.scrollbarstyle">
+    <div class="scroll-bar-up" ng-click="vm.clickUp()"></div>
+    <div class="scroll-bar-slider" id="slider-bar">
+      <div class="scroll-bar-slider-picker" ng-style="vm.pickerStyle"></div>
+    </div>
+    <div class="scroll-bar-down" ng-click="vm.clickDown()"></div>
+  </div>
+</div>

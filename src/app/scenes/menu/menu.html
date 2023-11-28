@@ -1,0 +1,110 @@
+<div class="tela menu">
+
+  <section class="screen screen-0 flex no-mobile-flex" ng-class="{blur: menu.trilhaSelected != -1}">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div class="row">
+            <div class="col-sm-5 col-md-4 col-sm-offset-2">
+              <img class="img-responsive" src="assets/images/imagens/frase_02.png" alt="" style="height: 5rem;">
+              <!--p class="title purple bold">INTRODUÇÃO AO ESG PARA BANCOS</p-->
+              <p class="black my-1">Clique nos destaques para acessar o conteúdo</p>
+
+              <div class="flex" style="gap: 1rem;">
+
+                <div class="ep-btn flex-width ep01" ng-class="{pulse2: !menu.trilhas.trilha1.completed}" ng-click="menu.goto(1, $event)">
+                  <p>Ep01</p>
+                </div>
+
+                <div class="ep-btn flex-width ep02" ng-class="{pulse2: menu.trilhas.trilha1.completed && !menu.trilhas.trilha2.completed}" ng-click="menu.goto(2, $event)">
+                  <p>Ep02</p>
+                </div>
+
+              </div>
+
+              <div class="flex mt-1 m-mt-1" style="gap: 1rem;">
+
+                <div class="ep-btn flex-width ep03" ng-class="{pulse2: menu.trilhas.trilha2.completed && !menu.trilhas.trilha3.completed}" ng-click="menu.goto(3, $event)">
+                  <p>Ep03</p>
+                </div>
+
+                <div class="ep-btn flex-width ep04" ng-class="{pulse2: menu.trilhas.trilha3.completed && !menu.trilhas.trilha4.completed}" ng-click="menu.goto(4, $event)">
+                  <p>Ep04</p>
+                </div>
+
+              </div>
+
+              <div class="flex mt-1 m-mt-1" style="gap: 1rem;">
+
+                <div class="ep-btn flex-width ep05" ng-class="{pulse2: menu.trilhas.trilha4.completed && !menu.trilhas.trilha5.completed}" ng-click="menu.goto(5, $event)">
+                  <p>Ep05</p>
+                </div>
+
+                <div class="ep-btn flex-width ep06" ng-class="{pulse2: menu.trilhas.trilha5.completed && !menu.trilhas.trilha6.completed}" ng-click="menu.goto(6, $event)">
+                  <p>Ep06</p>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="welcome-screen" ng-if="menu.trilhaSelected != -1">
+    <div class="welcome-container">
+      <div class="welcome-content black semibold">
+        <p ng-if="menu.trilhaSelected === 0">No primeiro episódio da Websérie Febraban Educação, entenda o que é ESG e Finanças Sustentáveis: Contexto, Definições e História.</p>
+        <p ng-if="menu.trilhaSelected === 1">Agora, vamos explicar o que são os fatores ambientais que influenciam na agenda ESG.</p>
+        <p ng-if="menu.trilhaSelected === 2">É hora de entender o “S”, ou seja, compreender o que são os fatores sociais dentro da agenda ESG.</p>
+        <p ng-if="menu.trilhaSelected === 3">Após as conceituações iniciais, ouça a série ESG <i>Talks</i>. Neste primeiro episódio, vamos falar sobre os governança da ESG.</p>
+        <p ng-if="menu.trilhaSelected === 4">Continuando, neste ESG <i>Talks</i> um entrevistado vai falar sobre o Panorama das regulações socioambientais para o setor financeiro no Brasil.</p>
+        <p ng-if="menu.trilhaSelected === 5">No último episódio foi apresentada outra entrevista sobre as barreiras para a avaliação de risco social, ambiental e climático e como endereçá-los e, também, as oportunidades e contribuições do setor bancário para promover a transição para uma economia mais sustentável.</p>
+
+        <p ng-if="menu.trilhaSelected === 6">Muito bem, você chegou ao final da websérie!<br/>
+          Agora, faça a avaliação para testar o seu conhecimento.<br/><br/>
+          Até breve!</p>
+
+        <p class="mt-1" ng-if="menu.trilhaSelected === 0">Clique para acessar esse conteúdo.</p>
+        <p class="mt-1" ng-if="menu.trilhaSelected === 1">Clique aqui e entenda esse conceito.</p>
+        <p class="mt-1" ng-if="menu.trilhaSelected === 2">Clique aqui e entenda esse conceito.</p>
+        <p class="mt-1" ng-if="menu.trilhaSelected === 3">Clique aqui e ouça o 4º episódio.</p>
+        <p class="mt-1" ng-if="menu.trilhaSelected === 4">Clique aqui e ouça o 5º episódio.</p>
+        <p class="mt-1" ng-if="menu.trilhaSelected === 5">Clique aqui e ouça o último episódio.</p>
+
+        <div class="center mt-2">
+          <img class="block centered" src="assets/images/botoes/botao_comecar.png" ng-click="menu.iniciar()" style="max-height: 3rem;" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="final-screen" ng-if="menu.finalScreen">
+    <div class="final-content container-fluid">
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-7">
+          <p class="title bold mb-0 m-mb-0">Muito bem,</p>
+          <p>você chegou ao final da websérie!</p>
+
+          <p>Agora, faça a avaliação para testar o seu conhecimento.</p>
+
+          <p>Até breve!</p>
+
+          <div class="mt-2 m-mt-2">
+            <div class="inline-block-middle bg-black box-btn" ng-click="menu.finalScreen = false">
+              <p class="white">Clique aqui para <br/>voltar ao menu</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,85 @@
+.tela.intros
+  position relative
+  left 0px
+  top 0px
+  width 100vw
+  height 100vh
+  height calc(100 * var(--vh))
+  overflow hidden
+  background white
+
+  .screen
+    &.screen-0
+      padding 0
+      background url(../assets/images/bgs/bg_01.png)
+      background-size cover
+      background-position center
+      background-repeat no-repeat
+
+    &.screen-1
+      padding 0
+      background url(../assets/images/bgs/bg_02.png)
+      background-size cover
+      background-position center
+      background-repeat no-repeat
+
+      &:before
+        content ""
+        position absolute
+        left 0
+        top 0
+        width calc((100% / 12) * 4.5)
+        height calc(100%)
+        background url(../assets/images/imagens/imagem_02.png)
+        background-size contain
+        background-position left top
+        background-repeat no-repeat
+
+    &.screen-2
+      padding 0
+      background url(../assets/images/bgs/bg_03.png)
+      background-size cover
+      background-position center
+      background-repeat no-repeat
+
+  .next-btn
+    display block
+    margin 0 auto
+
+  /*@media only screen and (orientation:portrait)
+    .menu-bg1
+      display none*/
+
+  @media only screen and (orientation:landscape)
+    .row
+
+      &.nowrap
+        white-space nowrap
+
+        .no-float
+          float none
+          display inline-block
+          white-space normal
+
+          &.middle
+            vertical-align middle
+
+  @media only screen and (orientation:portrait)
+    .next-btn
+      position fixed
+      right 0
+      bottom 0
+      transform translateY(5%) translateX(5%)
+      padding 0 !important
+      float none !important
+      z-index 100
+
+    .prev-btn
+      position fixed
+      left 0
+      bottom 0
+      transform translateY(5%) translateX(-20%)
+      padding 0 !important
+      float none !important
+      z-index 100
+

@@ -1,0 +1,65 @@
+<div class="moldura-container">
+  <div class="moldura" ng-show="vm.show">
+    <!--div class="btn-fechar" ng-click="vm.sair()">
+      <img src="assets/images/default/btn_fechar.png">
+    </div-->
+
+    <!--div class="btn-help over-btn" ng-click="vm.showHideHelp()">
+      <img class="normal" src="assets/images/default/index/btn_ajuda_0001.png">
+      <img class="over" src="assets/images/default/index/btn_ajuda_0002.png">
+    </div>
+    <div class="btn-menu over-btn" ng-click="vm.openMenu()">
+      <img class="normal" src="assets/images/default/index/btn_menu_0001.png">
+      <img class="over" src="assets/images/default/index/btn_menu_0002.png">
+    </div-->
+
+    <!--div class="btn-mapa over-btn" ng-click="vm.askForMap()">
+      <img class="normal" src="assets/images/default/index/btn_mapa_verde_0001.png">
+      <img class="over" src="assets/images/default/index/btn_mapa_verde_0002.png">
+    </div-->
+
+    <div class="next-btn" ng-hide="vm.locknext">
+      <div class="mold-btn" ng-click="vm.goNext()">
+        <!--div class="btn-inside">
+          <span>Avançar</span>
+        </div-->
+        <img src="assets/images/botoes/botao_avancar_azul.png" alt="">
+      </div>
+    </div>
+
+    <div class="prev-btn" ng-hide="vm.lockprev">
+      <div class="mold-btn" ng-click="vm.goPrev()">
+        <!--div class="btn-inside">
+          <span>Voltar</span>
+        </div-->
+        <img src="assets/images/botoes/botao_voltar_azul.png" alt="">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="askmap-screen" ng-show="vm.askingMap">
+    <adiv  pos="{x:706, y:465}">
+      <img src="assets/images/default/index/tela_voltar_mapa.png">
+    </adiv>
+
+    <adiv pos="{x:794, y:600}">
+      <div class="btn" ng-click="vm.voltaMenu()">
+        <div class="btn-inside">
+          <p>Sim</p>
+          <!--img src="assets/images/default/btn_avanca.png"-->
+        </div>
+      </div>
+    </adiv>
+
+    <adiv pos="{x:990, y:600}">
+      <div class="btn" ng-click="vm.closeAskmap()">
+        <div class="btn-inside">
+          <p>Não</p>
+          <!--img src="assets/images/default/btn_avanca.png"-->
+        </div>
+      </div>
+  </div>
+
+
+</div>

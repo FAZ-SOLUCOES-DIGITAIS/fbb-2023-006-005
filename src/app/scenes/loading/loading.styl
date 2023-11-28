@@ -1,0 +1,218 @@
+.tela.loading
+  position absolute
+  left 0px
+  top 0px
+  width 100%
+  height 100%
+  padding-left 0 !important
+  background url('../assets/images/loading/bg_loading.png')
+  background-color #fff
+  background-repeat no-repeat
+  background-position bottom center
+  background-size cover
+  overflow hidden
+
+  .tela-content
+    display none
+    position relative
+
+    .btn
+      position absolute
+      left 850px//305px
+      top 980px
+
+  .loader-content
+    position relative
+    left 50%
+    top 50%
+    width 50%
+    min-width 300px
+    height auto
+    transform translateX(-50%) translateY(-50%)
+    //background rgba(0,0,0,0.8)
+    //background url('../assets/images/default/loading/loading_0002.png')
+
+
+    &.ng-hide-add
+      animation 0.2s fadeOut
+    &.ng-hide-remove
+      animation 0.2s fadeIn
+
+    .radialprogress
+      position absolute
+      left 50%
+      top 50%
+      transform translateX(-50%) translateY(-50% + 3rem)
+
+    .images
+      position absolute
+      left 0px
+      top 0px
+
+      img
+        position absolute
+        left 0px
+        top 0px
+
+    .progress-number
+      position relative
+      width 100%
+      text-align center
+      color #1d1d1d
+      font-size 20px
+      font-weight 700
+      line-height 40px
+
+      .big
+        font-size 40px
+        font-weight 500
+
+        .red
+          //font-weight bold
+          color #000
+
+    .loaded-message
+      position absolute
+      left 0px
+      top 0px
+
+      .bra-btn
+        position absolute
+        left 420px
+        top 675px
+
+    .progresss
+      position relative
+      left 0px
+      bottom 0
+      width 100%
+      height 16px
+      background #e6e6e6
+
+      .progress-bar
+        position absolute
+        left 0px
+        top -1px
+        height 100%
+        background #48c2e2
+        transition 0.5s width
+
+  .info
+    position fixed
+    left 0
+    top 0
+    width 100%
+    height 100%
+    background rgba(0,0,0,0.8)
+    display table
+
+    .info-container
+      display table-cell
+      vertical-align middle
+
+      .info-content
+        //background linear-gradient(#005a4f, #87b394)
+        background #fff
+        border-radius 20px
+        padding 2rem 3rem
+        width 50%
+        height auto
+        display block
+        margin 0 auto
+        text-align center
+        color white
+        font-weight 500
+
+        img
+          width 80px
+          display inline-block
+          vertical-align middle
+          animation 2s halfRotate infinite
+
+        p
+          width calc(100% - 105px)
+          display inline-block
+          vertical-align middle
+          margin-left 20px
+          text-align left
+          font-size 1.4rem
+          line-height 120%
+          color #0060aa
+
+        button
+          display block
+          margin 0 auto
+          margin-top 30px
+          padding 0.5rem 1.5rem
+          box-shadow 3px 3px 4px 1px rgba(0,0,0,0.4)
+          //transition 0.15s background
+          font-size 1.2rem
+          font-weight bold
+
+          &:hover
+            background #0060aa
+            color white
+
+
+  /* Small devices (tablets, 768px and up) */
+  @media screen and (max-width: 768px)
+
+    .info
+
+      .info-container
+
+        .info-content
+          padding 1rem 2rem
+          width 90%
+
+          img
+            width 40%
+            max-width 80px
+            display block
+            margin 0 auto
+            margin-bottom 15px
+
+          p
+            width 100%
+            max-width none
+            display block
+            margin-left 0px
+            text-align left
+            font-size 1.2rem
+
+  @media screen and (orientation:landscape) and (min-device-width: 480px) and (max-device-width: 850px)
+    .info
+
+      .info-container
+
+        .info-content
+          padding 2rem 3rem
+          width 80%
+
+          img
+            width 80px
+            display inline-block
+
+          p
+            width calc(100% - 105px)
+            display inline-block
+            vertical-align middle
+            margin-left 20px
+            text-align left
+            font-size 1.4rem
+            line-height 120%
+
+          button
+            display block
+            margin 0 auto
+            margin-top 30px
+
+
+
+@keyframes halfRotate
+  0%
+    transform rotate(0deg)
+  50%
+    transform rotate(-90deg)
+  100%
+    transform rotate(0deg)

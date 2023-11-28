@@ -1,0 +1,72 @@
+.tela.mod1tela4
+  position relative
+  min-height 100%
+  width 100%
+  height 100% /* cross-browser */
+  height calc(100 * var(--vh))
+  overflow hidden
+  background url('../assets/images/px/bgs/bg_08.png')
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+  background-attachment fixed
+
+  .container-fluid
+
+    .page
+      position relative
+      left 0
+      top 0
+      width 100%
+      height 100%
+      //background-color #ccc
+
+    .box1
+      width 40vw
+      height calc(40vw * 0.76)
+      background url(../assets/images/px/imagens/box_petrobras.png)
+      background-size 100% 100%
+      padding calc(40vw * 0.76 * 0.38) 7rem 0 3rem
+      margin-top calc(45vw * 0.76 * 0.15 * -1)
+      margin-left -2rem
+      margin-bottom -2rem
+
+  @media only screen and (orientation:landscape)
+    .row
+
+      &.nowrap
+        white-space nowrap
+
+        .no-float
+          float none
+          display inline-block
+          white-space normal
+
+          &.middle
+            vertical-align middle
+
+  @media only screen and (orientation:landscape) and (max-width: 850px)
+    .container-fluid
+
+      .box1
+        width 100%
+        min-height calc(40vw * 0.76)
+        height auto
+        background url(../assets/images/px/imagens/box_petrobras.png)
+        background-size 100% 100%
+        padding calc(40vw * 0.76 * 0.38) 7rem 5rem 3rem
+        margin-top calc(45vw * 0.76 * 0.15 * -1)
+        margin-left -2rem
+        margin-bottom -2rem
+
+  @media only screen and (orientation: portrait)
+    .container-fluid
+      .box1
+        width 95vw
+        height calc(95vw * 0.76)
+        background url(../assets/images/px/imagens/box_petrobras.png)
+        background-size 100% 100%
+        padding calc(95vw * 0.76 * 0.38) 7rem 0 3rem
+        margin-top calc(95vw * 0.76 * 0.15 * -1)
+        margin-left 0rem
+        margin-bottom -2rem

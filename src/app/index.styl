@@ -1,0 +1,1453 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-stylus/bootstrap/variables.styl
+ */
+$navbar-inverse-link-color = #5AADBB
+$icon-font-path = "../../bootstrap-stylus/fonts/"
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-Black.ttf')
+  font-weight 900
+  font-style normal
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-BlackItalic.ttf')
+  font-weight 900
+  font-style italic
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-Bold.ttf')
+  font-weight bold
+  font-style normal
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-BoldItalic.ttf')
+  font-weight bold
+  font-style italic
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-ExtraBold.ttf')
+  font-weight 800
+  font-style normal
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-ExtraBoldItalic.ttf')
+  font-weight 800
+  font-style italic
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-Light.ttf')
+  font-weight 200
+  font-style normal
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-LightItalic.ttf')
+  font-weight 200
+  font-style italic
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-Medium.ttf')
+  font-weight 400
+  font-style normal
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-MediumItalic.ttf')
+  font-weight 400
+  font-style italic
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-Regular.ttf')
+  font-weight 300
+  font-style normal
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-RegularItalic.ttf')
+  font-weight 300
+  font-style italic
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-Thin.ttf')
+  font-weight 100
+  font-style normal
+
+@font-face
+  font-family "Barlow"
+  src url('../assets/fonts/Barlow-ThinItalic.ttf')
+  font-weight 100
+  font-style italic
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  stylus dependencies when defined in the bower.json of your dependencies
+ */
+// bower:styl
+// endbower
+
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your stylus files automatically
+ */
+// injector
+// endinjector
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, b, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+i{
+  font-style: italic;
+}
+
+a{
+  word-break:break-all;
+  line-height: 130%;
+}
+
+ul li{
+  line-height: 130%;
+  margin-bottom: 0.6rem;
+}
+
+p{
+  word-break break-word
+}
+
+*
+  box-sizing border-box
+
+  &:focus
+    outline none
+
+img
+  transform translateZ(1px)
+  image-rendering -webkit-optimize-contrast
+
+html, body
+  //height 100%
+  //height -webkit-fill-available
+  //height stretch
+  font-family "Barlow", sans-serif
+  font-size 16px
+  font-weight 300
+
+body
+  //min-height 100%
+  //min-height 100vh
+  //min-height -webkit-fill-available
+  //min-height stretch
+  color $font-color
+  background-color #474747
+  overscroll-behavior-y contain
+  overscroll-behavior none
+  color #000
+
+  .container-app
+    //min-height 100%
+    //height 100%
+    height auto
+    //overflow auto
+
+    &.goingleft
+      overflow hidden
+
+      .contentscreen
+        position fixed
+        width 100vw
+        overflow hidden
+
+        &.ng-enter
+          z-index 10
+          animation 0.5s entradireita
+
+        &.ng-leave
+          animation 0.5s saidireita
+
+    &.goingright
+      overflow hidden
+
+      .contentscreen
+        position fixed
+        width 100vw
+        overflow hidden
+
+        &.ng-enter
+          z-index 10
+          animation 0.5s entraesquerda
+
+        &.ng-leave
+          animation 0.5s saiesquerda
+
+  .container-fluid
+    height auto
+
+    .tela, .screen
+      min-height 100vh
+      min-height calc(100 * var(--vh))
+      height auto
+
+      .animate-top
+        opacity 0
+        animation 0.5s anim-top forwards
+
+      .animate-bottom
+        opacity 0
+        animation 0.5s anim-bottom forwards
+
+      .animate-left
+        opacity 0
+        animation 0.5s anim-left forwards
+
+      .animate-right
+        opacity 0
+        animation 0.5s anim-right forwards
+
+
+
+
+  .adiv, div, img, section
+    &.ng-hide-add, &.ng-leave
+      //animation 0.5s fadeOut
+    &.ng-hide-remove, &.ng-enter
+      animation 0.5s fadeIn
+
+    &.hide-animation
+      &.ng-hide-add, &.ng-leave
+        animation 0.5s fadeOut
+
+    &.remove-animation
+      &.ng-hide-add, &.ng-leave
+        animation none
+      &.ng-hide-remove, &.ng-enter
+        animation none
+
+    &.carrossel-animation
+      &.ng-hide-add, &.ng-leave
+        position absolute
+        left 0
+        top 0
+        animation 0.3s carHide
+      &.ng-hide-remove, &.ng-enter
+        position absolute
+        left 0
+        top 0
+        opacity 0
+        animation 0.3s carShow
+        animation-delay 0.2s
+        animation-fill-mode forwards
+
+  .anim-seta
+    animation 1s anim-seta infinite
+
+  .screen
+    position relative
+    z-index 10
+    padding 0
+    min-height 100%
+    min-height 100vh
+    min-height calc(100 * var(--vh))
+    min-height 100svh
+
+    &.fluid
+      min-height unset
+
+    .container-fluid
+      width 100%
+
+
+  .container-fluid
+    height 100%
+    //max-width 1170px
+
+    &.no-padding
+      padding-left 0
+      padding-right 0
+
+      >.row
+        margin-left 0
+        margin-right 0
+
+        [class*="col-"]
+          padding-left 0
+          padding-right 0
+
+    .row
+      &.min-padding
+        margin-left 2px
+        margin-right 2px
+
+        [class*="col-"]
+          padding-left 2px
+          padding-right 2px
+
+
+  /*p
+    font-size 1.1rem
+    line-height 135%
+    margin-bottom 0.7rem
+
+    &:last-child
+      margin-bottom 0*/
+
+  .double-space
+    p
+      margin-bottom 0.8rem
+
+      &:last-child
+        margin-bottom 0
+
+  .spaced
+    line-height 135%
+
+  .clear
+    clear both
+
+  .locked
+    background-color rgba(0,0,0,0.2) !important
+    pointer-events none
+
+    p
+      color #666 !important
+
+
+  .pop
+    position fixed !important
+    left 0
+    top 0
+    width 100%
+    height 100%
+    background rgba(0,0,0,0.7) !important
+    z-index 3000
+    display flex
+    align-items center
+    justify-content center
+
+    .pop-container
+      width 70%
+      height 80%
+      background white
+      padding 3rem 4rem
+      overflow auto
+      position relative
+
+    .pop-close
+      position absolute
+      top 10px
+      right 10px
+      display block
+
+      i
+        color black
+
+
+
+
+  .supertitle
+    font-size 3.5rem
+    line-height 115%
+  .title
+    font-size 2.5rem
+    line-height 115%
+  .subtitle
+    font-size 2rem
+    line-height 115%
+  .semititle
+    font-size 1.6rem
+    line-height 115%
+  .bigtext
+    font-size 1.2rem
+    line-height 130%
+  .small
+    font-size 0.8rem
+    line-height 120%
+
+  .double-space
+    line-height 150%
+
+  .strong
+    font-weight 400
+  .semibold
+    font-weight 500
+  .bold
+    font-weight bold
+  .extrabold
+    font-weight 800
+  .boldblack
+    font-weight 900
+
+
+  .center
+    text-align center
+  .left
+    text-align left
+  .right
+    text-align right
+
+  .blue-title
+    color #207a9f
+    line-height 100%
+    margin-bottom 0
+  .black
+    color black
+  .grey
+    color #cacaca
+  .white
+    color white
+  .blue
+    color #4ac1e1
+  .light-blue
+    color #0778be
+  .green-0
+    color #248c81
+  .green-1
+    color #0d9e91
+  .green-2
+    color #109373
+  .green-3
+    color #68b0ad
+  .green-4
+    color #438f8d
+  .yellow
+    color #daf439
+  .yellow-2
+    color #d0f301
+  .yellow-3
+    color #c4ba85
+  .blue-2
+    color #099add
+  .blue-3
+    color #00315c
+  .blue-4
+    color #187bbc
+  .blue-5
+    color #3e6f90
+  .green
+    color #6ece2e
+  .red
+    color #f22828
+  .pink
+    color #89115e
+  .pink-2
+    color #be56a3
+  .light-pink
+    color #ed9ba7
+
+  span.yellow, b.yellow
+    color #01c3e3
+    //color unset
+    //border-bottom 3px solid #daf439
+
+    &:hover
+      color #01c3e3
+      border-bottom 2px solid #01c3e3
+      //color #daf439
+
+  .bg-white
+    background-color white
+  .bg-blue
+    background-color #4ac1e1
+  .bg-black
+    background-color #000
+  .bg-light-blue
+    background-color #0778be
+  .bg-green
+    background-color #248c81
+  .bg-green-1
+    background-color #0d9e91
+  .bg-green-2
+    background-color #109373
+  .bg-green-3
+    background-color #68b0ad
+  .bg-green-4
+    background-color #438f8d
+  .bg-yellow
+    background-color #daf439
+  .bg-yellow-2
+    background-color #d0f301
+  .bg-yellow-3
+    background-color #c4ba85
+  .bg-blue-2
+    background-color #099add
+  .bg-blue-3
+    background-color #00315c
+  .bg-blue-4
+    background-color #187bbc
+  .bg-blue-5
+    background-color #3e6f90
+  .bg-blue-6
+    background-color #548fb9
+  .bg-blue-7
+    background-color #4bbce6
+  .bg-blue-8
+    background-color #4c77a4
+  .bg-grey
+    background-color #cacaca
+  .bg-pink
+    background-color #89115e
+  .bg-pink-2
+    background-color #be56a3
+  .bg-light-pink
+    background-color #ed9ba7
+
+
+
+  .bg-gradient-blue
+    background linear-gradient(135deg, #7dc0e7, #50aead)
+  .bg-blue-fade-white
+    background linear-gradient(180deg, #118ede, transparent)
+
+  .uppercase
+    text-transform uppercase
+
+
+  .border-radius
+    border-radius 0
+
+  .border-round
+    border-radius 0
+
+  .border-white
+    border 1px solid white
+
+  .box-shadow
+    box-shadow 3px 3px 3px 1px rgba(0,0,0,0.35)
+  .shadow
+    box-shadow 5px 5px 15px 1px rgba(0,0,0,0.2)
+
+  .box-btn
+    padding 0.5rem 2rem
+  .box-small
+    padding 0.8rem 1.2rem
+  .box-normal
+    padding 1rem 1.5rem
+  .box-big
+    padding 1.5rem 2rem
+
+  .flex
+    display flex
+    align-items center
+
+    &.flex-justify
+      justify-content center
+
+    &.flex-end
+      align-items flex-end
+
+    &.flex-start
+      align-items flex-start
+
+    &.flex-stretch
+      align-items stretch
+
+    .flex-width
+      flex 1 0 0px
+
+
+
+  .pulse
+    animation 1s 6 pulse
+
+  .pulse2
+    animation 1s 6 pulse2
+
+
+
+  .centered
+    margin-left auto
+    margin-right auto
+
+  .block
+    display block
+
+  .table
+    display table
+    //background-color transparent
+
+    .table
+      background-color transparent
+
+    .table-cell
+      display table-cell
+      vertical-align middle
+
+  .content-height
+    height 100%
+
+  .full
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+
+  .center-transform-x
+    left 50%
+    transform translateX(-50%)
+
+  .center-transform-y
+    top 50%
+    transform translateY(-50%)
+
+  .inline-block-middle
+    display inline-block
+    vertical-align middle
+
+  .inline-block-top
+    display inline-block
+    vertical-align top
+
+  .inline-block-bottom
+    display inline-block
+    vertical-align bottom
+
+  .mt-05
+    margin-top 0.5rem
+
+  for $num in range(0rem, 12rem, 1rem)
+    .px-{$num}
+      padding-left: $num
+      padding-right: $num
+    .py-{$num}
+      padding-top: $num
+      padding-bottom: $num
+    .pl-{$num}
+      padding-left: $num
+    .pr-{$num}
+      padding-right: $num
+    .pt-{$num}
+      padding-top: $num
+    .pb-{$num}
+      padding-bottom: $num
+    .mx-{$num}
+      margin-left: $num
+      margin-right: $num
+    .my-{$num}
+      margin-top: $num
+      margin-bottom: $num
+    .mt-{$num}
+      margin-top: $num
+    .mb-{$num}
+      margin-bottom: $num
+    .ml-{$num}
+      margin-left: $num
+    .mr-{$num}
+      margin-right: $num
+
+  for $wid in range(1, 100, 1)
+    .w-{$wid}
+      width: percentage($wid / 100)
+
+  .comp-hover-btn
+    .normal
+      display block
+    .over
+      display none
+    .completed
+      display none
+    .inactive
+      display none
+
+    &:hover, &.selected
+      .normal
+        display none
+      .over
+        display block
+      .completed
+        display none
+      .inactive
+        display none
+
+    &.completed
+      .normal
+        display none
+      .over
+        display none
+      .completed
+        display block
+      .inactive
+        display none
+
+      &:hover
+        .normal
+          display none
+        .over
+          display none
+        .completed
+          display block
+        .inactive
+          display none
+
+    &.inactive
+      cursor initial
+      opacity 0.7
+      .normal
+        display none
+      .over
+        display none
+      .completed
+        display none
+      .inactive
+        display block
+
+      &:hover
+        .normal
+          display none
+        .over
+          display none
+        .completed
+          display none
+        .inactive
+          display block
+
+
+@media screen and (max-width: 1024px)
+  html, body
+    font-size 12px
+
+@media screen and (max-width: 850px)
+  html, body
+    font-size 11px
+
+@media only screen and (orientation:landscape) and (min-width: 480px)
+  html, body
+    .container-fluid
+      height 100%
+
+      &.container-table
+        display table
+        width 100%
+
+        .row
+          height 100%
+          //display table-row
+          display inline
+
+          &.block
+            display block
+
+          &.nowrap
+            white-space nowrap
+
+          .no-float
+            display table-cell
+            float none
+            vertical-align top
+            white-space normal
+
+            &.middle
+              vertical-align middle
+            &.bottom
+              vertical-align bottom
+
+@media only screen and (min-width: 768px)
+  html, body
+    .mob
+      display none
+    .container-fluid
+      height 100%
+
+      &.container-table
+        display table
+        width 100%
+
+        .row
+          height 100%
+          //display table-row
+          display inline
+
+          &.block
+            display block
+
+          &.nowrap
+            white-space nowrap
+
+          .no-float
+            display inline-block
+            float none
+            vertical-align top
+            white-space normal
+
+            &.middle
+              vertical-align middle
+
+            &.bottom
+              vertical-align bottom
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (max-width: 768px)
+  html, body
+    font-size 11px
+
+    .desk
+      display none
+
+    .pop
+
+      .pop-content
+
+        img
+          max-width 95%
+
+          &.m-60
+            width 80%
+          &.m-40
+            width 80%
+
+      .pop-close
+        height 24px
+
+        img
+          height 100%
+
+    .boxed
+      padding 1.5rem 2rem
+
+      &.footer
+        position absolute
+        bottom 0
+        left 0
+        width 100%
+      &.boxed-center
+        transform none
+        text-align center
+
+      .items-navigator
+        transform none !important
+
+    for $num in range(0rem, 12rem, 1rem)
+      .px-{$num}
+        padding-left: 1rem
+        padding-right: 1rem
+      .py-{$num}
+        padding-top: 1rem
+        padding-bottom: 1rem
+      .pl-{$num}
+        padding-left: 1rem
+      .pr-{$num}
+        padding-right: 1rem
+      .pt-{$num}
+        padding-top: 1rem
+      .pb-{$num}
+        padding-bottom: 1rem
+      .mx-{$num}
+        margin-left: 1rem
+        margin-right: 1rem
+      .my-{$num}
+        margin-top: 1rem
+        margin-bottom: 1rem
+      .mt-{$num}
+        margin-top: 1rem
+      .mb-{$num}
+        margin-bottom: 1rem
+      .ml-{$num}
+        margin-left: 1rem
+      .mr-{$num}
+        margin-right: 1rem
+
+    for $mnum in range(0rem, 12rem, 1rem)
+      .m-px-{$mnum}
+        padding-left: $mnum
+        padding-right: $mnum
+      .m-py-{$mnum}
+        padding-top: $mnum
+        padding-bottom: $mnum
+      .m-pl-{$mnum}
+        padding-left: $mnum
+      .m-pr-{$mnum}
+        padding-right: $mnum
+      .m-pt-{$mnum}
+        padding-top: $mnum
+      .m-pb-{$mnum}
+        padding-bottom: $mnum
+      .m-mx-{$mnum}
+        margin-left: $mnum
+        margin-right: $mnum
+      .m-my-{$mnum}
+        margin-top: $mnum
+        margin-bottom: $mnum
+      .m-mt-{$mnum}
+        margin-top: $mnum
+      .m-mb-{$mnum}
+        margin-bottom: $mnum
+      .m-ml-{$mnum}
+        margin-left: $mnum
+      .m-mr-{$mnum}
+        margin-right: $mnum
+
+@media screen and (orientation:landscape) and (max-device-width: 1025px)
+  /* Your CSS Here*/
+  html, body
+    font-size 11px
+
+@media screen and (orientation:landscape) and (max-device-width: 850px)
+  /* Your CSS Here*/
+  html, body
+    font-size 10px
+
+    .show-landscape
+      display initial !important
+
+    .pop
+
+      .pop-content
+
+        img
+
+          &.m-60
+            max-width 55%
+          &.m-40
+            max-width 25%
+
+      .pop-close
+        height 24px
+
+        img
+          height 100%
+
+  .col-sm-1
+    width calc((100% / 12 ) * 1)
+    float left
+  .col-sm-2
+    width calc((100% / 12 ) * 2)
+    float left
+  .col-sm-3
+    width calc((100% / 12 ) * 3)
+    float left
+  .col-sm-4
+    width calc((100% / 12 ) * 4)
+    float left
+  .col-sm-5
+    width calc((100% / 12 ) * 5)
+    float left
+  .col-sm-6
+    width calc((100% / 12 ) * 6)
+    float left
+  .col-sm-7
+    width calc((100% / 12 ) * 7)
+    float left
+  .col-sm-8
+    width calc((100% / 12 ) * 8)
+    float left
+  .col-sm-9
+    width calc((100% / 12 ) * 9)
+    float left
+  .col-sm-10
+    width calc((100% / 12 ) * 10)
+    float left
+  .col-sm-11
+    width calc((100% / 12 ) * 11)
+    float left
+  .col-sm-12
+    width calc((100% / 12 ) * 12)
+    float left
+
+  .col-xs-offset-1
+    margin-left 0
+  .col-xs-offset-2
+    margin-left 0
+  .col-xs-offset-3
+    margin-left 0
+  .col-xs-offset-4
+    margin-left 0
+  .col-xs-offset-5
+    margin-left 0
+  .col-xs-offset-6
+    margin-left 0
+  .col-xs-offset-7
+    margin-left 0
+  .col-xs-offset-8
+    margin-left 0
+  .col-xs-offset-9
+    margin-left 0
+  .col-xs-offset-10
+    margin-left 0
+  .col-xs-offset-11
+    margin-left 0
+  .col-xs-offset-12
+    margin-left 0
+
+  .col-sm-offset-1
+    margin-left calc((100% / 12 ) * 1)
+  .col-sm-offset-2
+    margin-left calc((100% / 12 ) * 2)
+  .col-sm-offset-3
+    margin-left calc((100% / 12 ) * 3)
+  .col-sm-offset-4
+    margin-left calc((100% / 12 ) * 4)
+  .col-sm-offset-5
+    margin-left calc((100% / 12 ) * 5)
+  .col-sm-offset-6
+    margin-left calc((100% / 12 ) * 6)
+  .col-sm-offset-7
+    margin-left calc((100% / 12 ) * 7)
+  .col-sm-offset-8
+    margin-left calc((100% / 12 ) * 8)
+  .col-sm-offset-9
+    margin-left calc((100% / 12 ) * 9)
+  .col-sm-offset-10
+    margin-left calc((100% / 12 ) * 10)
+  .col-sm-offset-11
+    margin-left calc((100% / 12 ) * 11)
+  .col-sm-offset-12
+    margin-left calc((100% / 12 ) * 12)
+
+  body
+
+    .btn
+      padding 1rem 2rem
+
+    /*for $num in range(0rem, 12rem, 1rem)
+      .px-{$num}
+        padding-left: 1rem
+        padding-right: 1rem
+      .py-{$num}
+        padding-top: 1rem
+        padding-bottom: 1rem
+      .pl-{$num}
+        padding-left: 1rem
+      .pr-{$num}
+        padding-right: 1rem
+      .pt-{$num}
+        padding-top: 1rem
+      .pb-{$num}
+        padding-bottom: 1rem
+      .mx-{$num}
+        margin-left: 1rem
+        margin-right: 1rem
+      .my-{$num}
+        margin-top: 1rem
+        margin-bottom: 1rem
+      .mt-{$num}
+        margin-top: 1rem
+      .mb-{$num}
+        margin-bottom: 1rem
+      .ml-{$num}
+        margin-left: 1rem
+      .mr-{$num}
+        margin-right: 1rem*/
+
+    for $mnum in range(0rem, 12rem, 1rem)
+      .m-px-{$mnum}
+        padding-left: 1rem
+        padding-right: 1rem
+      .m-py-{$mnum}
+        padding-top: 1rem
+        padding-bottom: 1rem
+      .m-pl-{$mnum}
+        padding-left: 1rem
+      .m-pr-{$mnum}
+        padding-right: 1rem
+      .m-pt-{$mnum}
+        padding-top: 1rem
+      .m-pb-{$mnum}
+        padding-bottom: 1rem
+      .m-mx-{$mnum}
+        margin-left: 1rem
+        margin-right: 1rem
+      .m-my-{$mnum}
+        margin-top: 1rem
+        margin-bottom: 1rem
+      .m-mt-{$mnum}
+        margin-top: 1rem
+      .m-mb-{$mnum}
+        margin-bottom: 1rem
+      .m-ml-{$mnum}
+        margin-left: 1rem
+      .m-mr-{$mnum}
+        margin-right: 1rem
+
+    for $num in range(0rem, 12rem, 1rem)
+      .px-{$num}
+        padding-left: $num
+        padding-right: $num
+      .py-{$num}
+        padding-top: $num
+        padding-bottom: $num
+      .p{$num}
+        padding-left: $num
+      .pr-{$num}
+        padding-right: $num
+      .pt-{$num}
+        padding-top: $num
+      .pb-{$num}
+        padding-bottom: $num
+      .mx-{$num}
+        margin-left: $num
+        margin-right: $num
+      .my-{$num}
+        margin-top: $num
+        margin-bottom: $num
+      .mt-{$num}
+        margin-top: $num
+      .mb-{$num}
+        margin-bottom: $num
+      .ml-{$num}
+        margin-left: $num
+      .mr-{$num}
+        margin-right: $num
+
+    /*for $num in range(0rem, 12rem, 1rem)
+      .l-px-{$num}
+        padding-left: $num
+        padding-right: $num
+      .l-py-{$num}
+        padding-top: $num
+        padding-bottom: $num
+      .l-p{$num}
+        padding-left: $num
+      .l-pr-{$num}
+        padding-right: $num
+      .l-pt-{$num}
+        padding-top: $num
+      .l-pb-{$num}
+        padding-bottom: $num
+      .l-mx-{$num}
+        margin-left: $num
+        margin-right: $num
+      .l-my-{$num}
+        margin-top: $num
+        margin-bottom: $num
+      .l-mt-{$num}
+        margin-top: $num
+      .l-mb-{$num}
+        margin-bottom: $num
+      .l-ml-{$num}
+        margin-left: $num
+      .l-mr-{$num}
+        margin-right: $num*/
+
+@media screen and (orientation:landscape) and (max-device-width: 680px)
+  /* Your CSS Here*/
+  html, body
+    font-size 10px
+
+    for $num in range(0rem, 12rem, 1rem)
+      .l-px-{$num}
+        padding-left: $num
+        padding-right: $num
+      .l-py-{$num}
+        padding-top: $num
+        padding-bottom: $num
+      .l-p{$num}
+        padding-left: $num
+      .l-pr-{$num}
+        padding-right: $num
+      .l-pl-{$num}
+        padding-left: $num
+      .l-pt-{$num}
+        padding-top: $num
+      .l-pb-{$num}
+        padding-bottom: $num
+      .l-mx-{$num}
+        margin-left: $num
+        margin-right: $num
+      .l-my-{$num}
+        margin-top: $num
+        margin-bottom: $num
+      .l-mt-{$num}
+        margin-top: $num
+      .l-mb-{$num}
+        margin-bottom: $num
+      .l-ml-{$num}
+        margin-left: $num
+      .l-mr-{$num}
+        margin-right: $num
+
+@media screen and (orientation:landscape) and (max-device-width: 900px)
+
+  .hide-small-landscape
+    display none !important
+
+@media screen and (orientation:landscape)
+  .hide-mobile
+    display none !important
+
+  .content-mobile
+    display none !important
+
+
+@media screen and (orientation:landscape) and (min-width: 1024px)
+  html, body
+    font-size 12px
+
+@media screen and (orientation:landscape) and (min-width: 1140px)
+  html, body
+    font-size 14px
+
+@media screen and (orientation:landscape) and (min-width: 1360px)
+  html, body
+    font-size 16px
+
+
+@media screen and (orientation:landscape) and (min-width: 1440px)
+  html, body
+    font-size 20px
+
+@media screen and (orientation:landscape) and (min-width: 1900px)
+  html, body
+    font-size 24px
+
+@media screen and (orientation:portrait)
+  html, body
+    font-size 11px
+
+    .supertitle
+      font-size 2rem
+      line-height 115%
+    .title
+      font-size 1.8rem
+      line-height 115%
+    .subtitle
+      font-size 1.5rem
+      line-height 115%
+    .semititle
+      font-size 1.4rem
+      line-height 115%
+    .bigtext
+      font-size 1.2rem
+      line-height 130%
+    .small
+      font-size 0.8rem
+      line-height 120%
+
+  body
+
+    for $wid in range(1, 100, 1)
+      .mw-{$wid}
+        width: percentage($wid / 100)
+
+    .container-fluid
+      height auto
+
+      .tela, .screen
+        min-height unset
+        height auto
+
+  .hide-desktop
+    display none !important
+
+  .content-desktop
+    display none !important
+
+  .line
+    position absolute
+    left calc(50% - 1px)
+    top 0
+    width 2px
+    height 100%
+    background white
+
+
+  for $wid in range(1, 100, 1)
+    .p-{$wid}
+      top: percentage($wid / 100)
+      left: auto
+
+    .lb-{$wid}
+      top: percentage($wid / 100)
+      left: 50%
+      transform: translateX(-50%) translateY(calc(3rem))
+      bottom: auto
+
+    .rb-{$wid}
+      top: percentage($wid / 100)
+      left: 50%
+      transform: translateX(-50%) translateY(calc(3rem))
+      bottom: auto
+
+    .lt-{$wid}
+      top: percentage($wid / 100)
+      left: 50%
+      transform: translateX(-50%) translateY(calc(3rem))
+      bottom: auto
+
+
+
+@keyframes fadeOut
+  0%
+    opacity 1
+  100%
+    opacity 0
+
+@keyframes fadeIn
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+@keyframes carHide
+  0%
+    opacity 1
+    transform scale(1) translateY(0)
+  100%
+    opacity 0
+    transform scale(0) translateY(100%)
+
+@keyframes carShow
+  0%
+    opacity 0
+    transform scale(0) translateY(100%)
+  100%
+    opacity 1
+    transform scale(1) translateY(0)
+
+
+@keyframes pulse
+  0%
+    transform scale(0.98)
+  50%
+    transform scale(1.05)
+  100%
+    transform scale(0.98)
+
+@keyframes pulse2
+  0%
+    transform scale(1)
+  50%
+    transform scale(0.95)
+  100%
+    transform scale(1)
+
+
+/*@keyframes saiesquerda
+  0%
+    transform translateX(0)
+  100%
+    transform translateX(-100vw)
+
+@keyframes entraesquerda
+  0%
+    transform translateX(100vw)
+  100%
+    transform translateX(0px)
+
+@keyframes saidireita
+  0%
+    transform translateX(0)
+  100%
+    transform translateX(100vw)
+
+@keyframes entradireita
+  0%
+    transform translateX(-100vw)
+  100%
+    transform translateX(0px)*/
+
+@keyframes saiesquerda
+  0%
+    transform translateX(0)
+  100%
+    transform translateX(-100vw)
+
+@keyframes entraesquerda
+  0%
+    transform translateX(100vw)
+  100%
+    transform translateX(0px)
+
+@keyframes saidireita
+  0%
+    transform translateX(0)
+  100%
+    transform translateX(100vw)
+
+@keyframes entradireita
+  0%
+    transform translateX(-100vw)
+  100%
+    transform translateX(0px)
+
+
+@keyframes anim-top
+  0%
+    transform translateY(-100%)
+    opacity 0
+  100%
+    transform translateY(0)
+    opacity 1
+
+@keyframes anim-bottom
+  0%
+    transform translateY(100%)
+    opacity 0
+  100%
+    transform translateY(0)
+    opacity 1
+
+@keyframes anim-left
+  0%
+    transform translateX(-100%)
+    opacity 0
+  100%
+    transform translateX(0)
+    opacity 1
+
+@keyframes anim-right
+  0%
+    transform translateX(100%)
+    opacity 0
+  100%
+    transform translateX(0)
+    opacity 1
+
+
+@keyframes anim-seta
+  0%
+    transform translateX(0)
+    opacity 0
+  15%
+    transform translateX(-200%)
+    opacity 0
+  100%
+    transform translateX(0)
+    opacity 1
+

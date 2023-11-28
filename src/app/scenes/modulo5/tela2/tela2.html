@@ -1,0 +1,54 @@
+<div class="tela mod5tela2">
+
+  <section class="screen screen-0 flex no-mobile-flex bg-{{vm.currentItem[0]}}">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div class="row">
+            <div class="col-sm-offset-6 col-sm-4">
+
+              <div class="items">
+
+                <div class="items-content">
+
+                  <div class="bg-black white box-normal item" ng-if="vm.currentItem[0] === 0">
+                    <p class="bold uppercase">1. O que é o CDC?</p>
+                    <p class="mt-05">O Crédito Direto ao COnsumidor é uma modalidade de crédito muito comum no mercado nacional...</p>
+                  </div>
+
+                  <div class="bg-black white box-normal item" ng-if="vm.currentItem[0] === 1">
+                    <div>
+                      <p>Ele pode ser contratado diretamente....</p>
+                    </div>
+                  </div>
+
+                </div>
+
+
+                <div class="click-items">
+                  <div class="click-item" ng-click="vm.select(0,0)" ng-class="{completed: vm.items[0][0], current: vm.currentItem[0] === 0}"></div>
+                  <div class="click-item" ng-click="vm.select(0,1)" ng-class="{completed: vm.items[0][1], current: vm.currentItem[0] === 1}"></div>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="nav-buttons">
+    <div class="nav-button prev" ng-click="vm.game.prev()">
+      <img src="assets/images/mod5/botoes/botao_azul_voltar.png" alt="">
+    </div>
+    <div class="nav-button next" ng-click="vm.game.next()" ng-if="vm.game.screenFinished()">
+      <img src="assets/images/mod5/botoes/botao_azul_avancar.png" alt="">
+    </div>
+  </div>
+
+</div>

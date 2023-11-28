@@ -1,0 +1,18 @@
+<div class="menubtn comp-hover-btn" ng-transclude ng-style="vm.divstyle">
+  <div class="normal">
+    <img class="menubtn-img inline-block-middle" ng-src="{{vm.img + '.png'}}" alt="">
+    <p class="menubtn-text inline-block-middle">{{vm.text}}</p>
+  </div>
+  <div class="over">
+    <img class="menubtn-img inline-block-middle" ng-src="{{vm.img + '_hover.png'}}" alt="">
+    <p class="menubtn-text inline-block-middle">{{vm.text}}</p>
+  </div>
+  <div class="completed">
+    <img class="menubtn-img inline-block-middle" ng-src="{{vm.img + '_hover.png'}}" alt="">
+    <p class="menubtn-text inline-block-middle">{{vm.text}}</p>
+  </div>
+  <div class="inactive">
+    <img class="menubtn-img inline-block-middle" ng-src="{{vm.img + '_inativo.png'}}" alt="">
+    <p class="menubtn-text inline-block-middle">{{vm.text}}</p>
+  </div>
+</div>

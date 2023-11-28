@@ -1,0 +1,113 @@
+<div class="tela intros">
+
+
+  <section class="screen screen-0 flex no-mobile-flex" ng-if="intro.currentItem === 0">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div class="row flex no-mobile-flex">
+
+            <div class="col-sm-5 col-md-4 col-sm-offset-2">
+              <p class="semititle bold">
+                Não é novidade que atualmente o mundo está cheio de novos desafios e preocupações.
+              </p>
+
+              <p class="mt-1">
+                É só você pensar em algumas questões que até poucos anos atrás eram praticamente desconhecidas e, agora, estão em alta na opinião pública — e não são vistas apenas como responsabilidade do poder público, mas também das Organizações e no setor bancário.
+              </p>
+
+              <p>Clique na seta lateral, ou deslizea tela, se estiver no celular.</p>
+
+            </div>
+
+            <div class="col-sm-4 col-md-5">
+              <img class="img-responsive block centered mt-6 m-mt-1" src="assets/images/imagens/imagem_01.png" alt="">
+            </div>
+
+            <div class="col-sm-1 col-md-1">
+              <img class="img-responsive next-btn" src="assets/images/botoes/botao_avancar_azul.png" style="max-width: 3rem;" alt="" ng-click="intro.currentItem = 1">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen screen-1 flex no-mobile-flex" ng-if="intro.currentItem === 1">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div class="row flex no-mobile-flex">
+            <div class="col-sm-1 col-md-1">
+              <img class="img-responsive prev-btn" src="assets/images/botoes/botao_voltar_azul.png" style="max-width: 3rem;" alt="" ng-click="intro.currentItem = 0">
+            </div>
+
+            <div class="col-sm-4">
+
+            </div>
+
+            <div class="col-sm-5">
+
+              <p>E se antes a palavra sustentabilidade dava o tom do debate, a sigla <span class="bigtext bold">ESG</span> vem ganhando cada vez mais força dentro das discussões sobre o futuro das Organizações.</p>
+              <p>Ao contrário do que se imagina, ESG não é apenas um guia de boas práticas. </p>
+              <p>É muito mais do que isso: </p>
+              <p class="bold">A agenda ESG serve para ajudar as Organizações que desejam se comprometer com questões  </p>
+
+              <img class="img-responsive mt-2 m-mt-2" src="assets/images/imagens/frase_01.png" alt="" style="max-height: 10rem;">
+
+            </div>
+
+            <div class="col-sm-1 col-md-1 col-sm-offset-1">
+              <img class="img-responsive next-btn" src="assets/images/botoes/botao_avancar_azul.png" style="max-width: 3rem;" alt="" ng-click="intro.currentItem = 2">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen screen-2 flex no-mobile-flex" ng-if="intro.currentItem === 2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div class="row flex no-mobile-flex">
+            <div class="col-sm-1 col-md-1">
+              <img class="img-responsive prev-btn" src="assets/images/botoes/botao_voltar_azul.png" style="max-width: 3rem;" alt="" ng-click="intro.currentItem = 1">
+            </div>
+
+            <div class="col-sm-4 col-sm-offset-2">
+              <p>E para você se preparar para esse novo mundo, o Infi preparou uma websérie com tudo o que você precisa saber sobre a agenda ESG. </p>
+
+              <p class="bold">Boas-vindas ao curso  </p>
+
+              <p class="subtitle bold">Introdução ao ESG para bancos.</p>
+
+              <p class="mt-1">
+                Acesse o menu e comece agora mesmo a entender mais sobre esse tema fundamental para o mundo de hoje e de amanhã!
+              </p>
+
+            </div>
+
+            <div class="col-sm-4 no-float">
+              <img class="img-responsive mt-1 m-mt-1" src="assets/images/imagens/icone_01.png" alt="" style="height: 5rem;">
+              <img class="img-responsive mt-1 m-mt-1" src="assets/images/imagens/icone_02.png" alt="" style="height: 5rem;">
+              <img class="img-responsive mt-1 m-mt-1" src="assets/images/imagens/icone_03.png" alt="" style="height: 5rem;">
+            </div>
+
+            <div class="col-sm-1 col-md-1">
+              <img class="img-responsive next-btn" src="assets/images/botoes/botao_avancar_azul.png" style="max-width: 3rem;" alt="" ng-click="intro.continue()">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

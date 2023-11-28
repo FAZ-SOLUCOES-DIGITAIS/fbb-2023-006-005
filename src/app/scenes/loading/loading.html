@@ -1,0 +1,45 @@
+<div class="tela loading">
+  <div class="tela-content">
+
+    <!--adiv pos="{x:0, y:0}" from="{x:0, y:0}" duration="0.5" delay="0" alpha="{from:0, to:1}" >
+      <img src="assets/images/bg/bg_loading.png">
+    </adiv-->
+    <!--adiv pos="{x:730, y:390}" from="{x:730, y:390}" duration="0.5" delay="0" alpha="{from:0, to:1}" >
+      <img src="assets/images/default/loading/Einstein.png">
+    </adiv-->
+
+    <!--div class="btn" ng-click="loading.start()" ng-show="!loading.showLoading">
+      <div class="btn-inside">
+        <img class="normal" src="assets/images/default/btn_comecar_0001.png">
+        <img class="hover" src="assets/images/default/btn_comecar_0002.png">
+      </div>
+    </div-->
+
+  </div>
+
+  <div class="loader-content" ng-show="loading.showLoading">
+
+    <!--radialprogress config="loading.radialProgress"></radialprogress-->
+
+    <img class="img-responsive blçock centered" src="assets/images/loading/LOGO_FE_EDUCACAO_V_sem_fundo.png" alt="">
+
+    <div class="progresss mt-1 m-mt-1">
+      <div class="progress-bar" ng-style="loading.progressStyle"></div>
+    </div>
+
+    <!--div class="progress-number mt-1 m-mt-1">carregando <br/><span class="big">{{loading.loaded}}</span>%</div-->
+    <div class="progress-number mt-1 m-mt-1 uppercase">carregando</div>
+
+  </div>
+
+  <div class="info" ng-show="loading.allLoaded">
+    <div class="info-container">
+      <div class="info-content">
+        <img src="assets/images/icone_celular.png" alt="">
+        <p>Para navegação em dispositivos móveis (celular ou tablet) verifique a melhor forma de visualização. Você pode visualizar na posição vertical ou horizontal.</p>
+        <button class="btn bg-black white" ng-click="loading.start()">Entendi</button>
+      </div>
+    </div>
+  </div>
+
+</div>

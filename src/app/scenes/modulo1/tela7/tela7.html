@@ -1,0 +1,59 @@
+<div class="tela mod1tela7">
+
+  <section class="screen screen-0 flex no-mobile-flex">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div class="row">
+            <div class="col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-2">
+
+              <p>E para continuar seus estudos, que tal entender mais da história da agenda ESG com o 1º episódio da série </p>
+
+              <!--img class="img-responsive my-1" src="assets/images/px/titulos/t_02.png" alt=""-->
+              <p class="semititle mb-0 m-mb-0 bold">FEBRABAN EDUCAÇÃO:</p>
+              <p class="subtitle bold">INTRODUÇÃO AO ESG PARA BANCOS</p>
+
+              <p>Clique no <i>play</i> e assista ao primeiro episódio. </p>
+
+              <div class="center mt-2 m-mt-2" ng-if="vm.game.screenFinished()">
+                <div class="inline-block-middle bg-black box-btn" ng-click="vm.game.gotoMenu()">
+                  <p class="white">Clique aqui para <br/>voltar ao menu</p>
+                </div>
+              </div>
+
+            </div>
+            <!--div class="col-sm-5 no-float middle">
+              <video controls controlsList="nodownload" id="video-1">
+                <source src="assets/motion/INFI_ESG_EP01_v03.mp4" type="video/mp4">
+              </video>
+            </div-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="cell">
+      <img class="img-responsive" src="assets/images/imagens/imagem_11.png" alt="" ng-click="vm.openVideo()">
+    </div>
+
+  </section>
+
+
+  <div class="pop-video hide-animation" ng-if="vm.video">
+    <div class="pop-container">
+
+      <video controls controlsList="nodownload" id="video-1">
+        <source src="assets/videos/vazio.mp4" type="video/mp4">
+      </video>
+
+      <div class="pop-close" ng-click="vm.video = flase">
+        <p>x</p>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

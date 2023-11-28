@@ -1,0 +1,60 @@
+<div class="tela mod3tela1">
+
+  <section class="screen screen-0 flex no-mobile-flex">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+
+              <p>Ao entrar no S do ESG, surge um grande número de tendências que afetam governos, sociedades e economias por um longo período de tempo. </p>
+
+              <p class="mt-1">Nesse sentido, os agentes financeiros precisam entender <span class="bold">a relação entre essas tendências sociais e os modelos de negócios das empresas</span>.</p>
+
+              <p class="mt-1">Para tratar desse assunto relacionado às questões sociais, assista o 3º episódio da série</p>
+
+              <!--img class="img-responsive my-1" src="assets/images/px/titulos/t_07.png" alt=""-->
+              <p class="subtitle bold my-1">FEBRABAN EDUCAÇÃO:<BR/> INTRODUÇÃO AO ESG PARA BANCOS</p>
+
+              <p class="">Clique no <i>play</i> e assista ao terceiro episódio.</p>
+
+              <div class="center mt-2 m-mt-2" ng-if="vm.game.screenFinished()">
+                <div class="inline-block-middle bg-black box-btn" ng-click="vm.game.gotoMenu()">
+                  <p class="white strong">Clique aqui para <br/>voltar ao menu</p>
+                </div>
+              </div>
+
+            </div>
+            <!--div class="col-sm-5 no-float middle">
+              <video controls controlsList="nodownload" id="video-2">
+                <source src="assets/motion/INFI_ESG_EP03_v02.mp4" type="video/mp4">
+              </video>
+            </div-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="cell">
+      <img class="img-responsive" src="assets/images/imagens/imagem_19.png" alt="" ng-click="vm.openVideo()">
+    </div>
+
+  </section>
+
+  <div class="pop-video hide-animation" ng-if="vm.video">
+    <div class="pop-container">
+
+      <video controls controlsList="nodownload" id="video-1">
+        <source src="assets/videos/vazio.mp4" type="video/mp4">
+      </video>
+
+      <div class="pop-close" ng-click="vm.video = flase">
+        <p>x</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>

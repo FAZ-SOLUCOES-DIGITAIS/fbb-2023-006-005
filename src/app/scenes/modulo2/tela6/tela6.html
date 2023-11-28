@@ -1,0 +1,65 @@
+<div class="tela mod2tela6">
+
+  <section class="screen screen-0 flex no-mobile-flex">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2 white">
+
+              <p>E não é só isso. </p>
+
+              <p>Além da poluição do ar, pelo menos 8 milhões de toneladas de plástico acabam em nossos oceanos todos os anos e constituem 80% de todos os detritos marinhos, desde as águas superficiais até os sedimentos do fundo do mar.</p>
+
+              <!--img class="img-responsive my-1" src="assets/images/px/titulos/t_05.png" alt=""-->
+              <p class="semititle purple bold my-1">8 MILHÕES DE TONELADAS DE PLÁSTICO</p>
+
+              <p>O assunto além de sério, é urgente. Vamos entender melhor quais iniciativas os governos estão tomando?<br/>
+              Veja o 2º episódio da série</p>
+
+              <!--img class="img-responsive my-1" src="assets/images/px/titulos/t_06.png" alt=""-->
+              <p class="semititle purple bold my-1">FEBRABAN EDUCAÇÃO: INTRODUÇÃO AO ESG PARA BANCOS</p>
+
+              <p>Clique no <i>play</i> e assista ao segundo episódio.</p>
+
+              <div class="center mt-2 m-mt-2" ng-if="vm.game.screenFinished()">
+                <div class="inline-block-middle bg-yellow-2 box-btn" ng-click="vm.game.gotoMenu()">
+                  <p class="black strong">Clique aqui para <br/>voltar ao menu</p>
+                </div>
+              </div>
+
+            </div>
+            <!--div class="col-sm-5 no-float middle">
+              <video controls controlsList="nodownload" id="video-2">
+                <source src="assets/motion/INFI_ESG_EP02_v02.mp4" type="video/mp4">
+              </video>
+            </div-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="cell">
+      <img class="img-responsive" src="assets/images/imagens/imagem_18.png" alt="" ng-click="vm.openVideo()">
+    </div>
+
+  </section>
+
+  <div class="pop-video hide-animation" ng-if="vm.video">
+    <div class="pop-container">
+
+      <video controls controlsList="nodownload" id="video-1">
+        <source src="assets/videos/vazio.mp4" type="video/mp4">
+      </video>
+
+      <div class="pop-close" ng-click="vm.video = flase">
+        <p>x</p>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
