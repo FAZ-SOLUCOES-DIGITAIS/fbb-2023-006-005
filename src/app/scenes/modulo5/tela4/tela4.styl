@@ -1,0 +1,121 @@
+.tela.mod5tela4
+  position relative
+  min-height 100%
+  width 100%
+  height 100% /* cross-browser */
+  height calc(100 * var(--vh))
+  overflow hidden
+
+  .screen
+    &.screen-0
+
+      &.bg-0
+        background url('../assets/images/mod5/imagens/imagem_08.png')
+        background-color #01c0e1
+        background-size contain
+        background-position center right
+        background-repeat no-repeat
+        padding 0
+        //background #000
+      &.bg-1
+        background url('../assets/images/mod5/imagens/imagem_09.png')
+        background-color #01c0e1
+        background-size contain
+        background-position center right
+        background-repeat no-repeat
+        padding 0
+        //background #000
+
+      // &:after
+      //   content ""
+      //   position absolute
+      //   left 0
+      //   top 0
+      //   z-index -3
+      //   border 1px solid red
+      //   width 50%//calc((100% / 12) * 1)
+      //   height calc(100%)
+      //   background url(../assets/images/mod5/grafismos/grafismo_01.png)
+      //   background-size contain
+      //   background-position left top
+      //   background-repeat no-repeat
+      //   pointer-events none
+
+      // &:before
+      //   content ""
+      //   position absolute
+      //   right 0
+      //   bottom 0
+      //   width 30%//calc((100% / 12) * 1)
+      //   height calc(100%)
+      //   background url(../assets/images/mod5/grafismos/grafismo_01.png)
+      //   background-size contain
+      //   background-position left top
+      //   background-repeat no-repeat
+      //   pointer-events none
+      //   transform rotate(180deg)
+      //   padding 0
+
+
+  .items
+
+    .items-content
+      min-height 14rem
+
+      .item
+        min-height 10rem
+        display flex
+        //align-items center
+        flex-direction column
+        justify-content center
+        gap 1rem
+        background #fff
+
+    .click-items
+      margin-top 1.5rem
+      display flex
+      align-items center
+      justify-content center
+      gap 0.5rem
+
+      .click-item
+        width 1.5rem
+        height 1.5rem
+        background #000
+        border 1px solid #000
+        transition all 0.3s
+
+        &.completed
+          background #666
+
+        &.current
+          background #01c0e1
+          width 1.8rem
+          height 1.8rem
+
+  .nav-buttons
+    position absolute
+    width 100%
+    left 0
+    top 0
+    z-index 1000
+
+    .nav-button
+      position absolute
+      top 50vh
+      transform translateY(-50%)
+
+      img
+        max-height 2.5rem
+
+      &.prev
+        left 1rem
+
+      &.next
+        right 1rem
+
+
+
+@media only screen and (orientation:portrait)
+  .tela.mod5tela4
+    position relative
