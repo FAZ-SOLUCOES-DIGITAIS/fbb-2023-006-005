@@ -1,0 +1,201 @@
+.tela.mod5tela5
+  position relative
+  min-height 100%
+  width 100%
+  height 100% /* cross-browser */
+  height calc(100 * var(--vh))
+  overflow hidden
+
+
+  .screen
+    &.screen-0
+
+      .descricao
+        height 60vh
+        padding 0 5rem 3rem 0
+        display flex
+        align-items end
+        justify-content end
+
+        & > div
+          width 60%
+          align-items initial
+          gap 2rem
+
+      .bg-grafismo04
+        width 100%
+        height 40vh
+        margin 0 !important
+        padding 0 !important
+        background url(../assets/images/mod5/grafismos/grafismo_04.png)
+        background-size 100% 100%
+        background-position center
+        background-repeat no-repeat
+
+      .quizz
+        padding 0 6rem
+        height 100vh
+
+        .grid-template-columns-3
+          display grid
+          grid-template-columns 80px 80px 1fr
+          grid-template-rows 80px 80px 80px
+          grid-gap 3rem
+
+          .item
+            display flex
+            align-items center
+            justify-content center
+
+            // font-size 1.5em
+
+            &.click-item
+              // background tomato
+              color #000
+
+              &.selected
+
+                &.correct
+                  position relative
+                  background #01c0e1
+
+                  &:after
+                    content ""
+                    position absolute
+                    top 0
+                    right 0
+                    transform translate(50%, -50%)
+                    height 30px
+                    width 30px
+                    background url(../assets/images/mod5/imagens/imagem_v_check.png)
+                    background-repeat no-repeat
+                    background-size 100% 100%
+                    background-position center center
+
+
+
+                &.wrong
+                  position relative
+                  background #01c0e1
+
+                  &:after
+                    content ""
+                    position absolute
+                    top 0
+                    right 0
+                    transform translate(50%, -50%)
+                    height 30px
+                    width 30px
+                    background url(../assets/images/mod5/imagens/imagem_x_check.png)
+                    background-repeat no-repeat
+                    background-size 100% 100%
+                    background-position center center
+
+
+              &:hover
+                transform scale(1.05)
+                cursor pointer
+
+
+
+
+
+
+
+      // &:before
+      //   content ""
+      //   position absolute
+      //   right 0
+      //   bottom 0
+      //   width 15%//calc((100% / 12) * 1)
+      //   height calc(100%)
+      //   background url(../assets/images/mod5/grafismos/grafismo_02.png)
+      //   background-size contain
+      //   background-position right bottom
+      //   background-repeat no-repeat
+      //   pointer-events none
+
+  // .items
+
+  //   .items-content
+  //     //min-height 10rem
+
+  //     .item
+  //       min-height 10rem
+  //       display flex
+  //       //align-items center
+  //       flex-direction column
+  //       justify-content center
+
+  //   .click-items
+  //     margin-top 1.5rem
+  //     display flex
+  //     align-items center
+  //     justify-content center
+  //     gap 0.5rem
+
+  //     .click-item
+  //       width 1.5rem
+  //       height 1.5rem
+  //       background #000
+  //       border 1px solid #000
+  //       transition all 0.3s
+
+  //       &.completed
+  //         background #666
+
+  //       &.current
+  //         background #01c0e1
+  //         width 1.8rem
+  //         height 1.8rem
+
+  .nav-buttons
+    position absolute
+    width 100%
+    left 0
+    top 0
+    z-index 1000
+
+    .nav-button
+      position absolute
+      top 50vh
+      transform translateY(-50%)
+
+      img
+        max-height 2.5rem
+
+      &.prev
+        left 1rem
+
+      &.next
+        right 1rem
+
+
+
+@media only screen and (orientation:portrait)
+  .tela.mod5tela5
+    position relative
+
+    .screen
+      &.screen-0
+        padding 0
+
+        .descricao
+          height 50vh
+          align-items center
+          justify-content center
+
+        .bg-grafismo04
+          display none
+
+        .quizz
+          padding 1rem
+          height 50vh
+          align-items center
+
+          .grid-template-columns-3
+            display grid
+            grid-template-columns 40px 40px 1fr
+            grid-template-rows 40px 40px 40px
+
+

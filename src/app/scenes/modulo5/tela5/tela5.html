@@ -1,0 +1,71 @@
+<div class="tela mod5tela5">
+
+  <section class="screen screen-0 bg-white no-mobile-flex">
+    <div class="container-fluid no-padding">
+      <div class="row">
+        <div class="col-xs-12 col-sm-5">
+          <div class="row descricao">
+            <div class="flex-column">
+              <p class="title bold">Exercício</p>
+
+              <p class="bigtext">
+                Chegou a hora de testar seus conhecimentos...
+              </p>
+              <p class="bigtext">
+                Clique em V se a questão for verdadeira e F se for falsa.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-grafismo04" />
+        </div>
+
+        <div class="col-xs-12 col-sm-7 bg-black quizz flex">
+          <div class="grid-template-columns-3 small">
+            <div class="item click-item subtitle extrabold bg-white" ng-click="vm.selectQuiz(0, 1, 0)"
+              ng-class="{selected: vm.currentItem[0] === 0, correct: vm.quiz[0].selected === 1, wrong: vm.quiz[0].selected === 0}">
+              V
+            </div>
+            <div class="item click-item subtitle extrabold bg-white" ng-click="vm.selectQuiz(0, 0, 1)"
+              ng-class="{selected: vm.currentItem[0] === 1, correct: vm.quiz[0].selected === 1, wrong: vm.quiz[0].selected === 0}">
+              F
+            </div>
+
+            <div class="item white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam doloribus magnam
+              repudiandae repellat magni ipsam rerum labore accusantium laborum officiis?</div>
+
+            <div class="item click-item subtitle extrabold bg-white" ng-click="vm.selectQuiz(1, 0, 0)"
+              ng-class="{selected: vm.currentItem[1] === 0, correct: vm.quiz[1].selected === 1, wrong: vm.quiz[1].selected === 0}">
+              V</div>
+            <div class="item click-item subtitle extrabold bg-white" ng-click="vm.selectQuiz(1, 1, 1)"
+              ng-class="{selected: vm.currentItem[1] === 1, correct: vm.quiz[1].selected === 1, wrong: vm.quiz[1].selected === 0}">
+              F</div>
+
+            <div class="item white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi maiores
+              necessitatibus excepturi facilis repudiandae illum eius perspiciatis error quidem amet.</div>
+
+            <div class="item click-item subtitle extrabold bg-white" ng-click="vm.selectQuiz(2, 1, 0)"
+              ng-class="{selected: vm.currentItem[2] === 0, correct: vm.quiz[2].selected === 1, wrong: vm.quiz[2].selected === 0}">
+              V</div>
+            <div class="item click-item subtitle extrabold bg-white" ng-click="vm.selectQuiz(2, 0, 1)"
+              ng-class="{selected: vm.currentItem[2] === 1, correct: vm.quiz[2].selected === 1, wrong: vm.quiz[2].selected === 0}">
+              F</div>
+
+            <div class="item white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quos aliquam excepturi
+              ipsa quam corporis laborum recusandae dicta distinctio officia?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="nav-buttons">
+    <div class="nav-button prev" ng-click="vm.game.prev()">
+      <img src="assets/images/mod5/botoes/botao_azul_voltar.png" alt="">
+    </div>
+    <div class="nav-button next" ng-click="vm.game.next()" ng-if="vm.game.screenFinished()">
+      <img src="assets/images/mod5/botoes/botao_azul_avancar.png" alt="">
+    </div>
+  </div>
+
+</div>
