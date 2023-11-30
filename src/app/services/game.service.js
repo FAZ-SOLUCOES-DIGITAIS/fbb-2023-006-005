@@ -223,7 +223,7 @@
 
       game.nextFunction = function(){
         if(game.screenFinished()){
-          //console.log("goingo to: ", game.data.currentScreen + 1)
+          console.log("goingo to: ", game.data.currentScreen + 1)
           game.gotoTela(game.data.currentScreen + 1)
         }
       }
