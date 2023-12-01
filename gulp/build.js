@@ -115,9 +115,9 @@ gulp.task('manifest', ['html', 'fonts', 'other', 'copyJS'], function() {
     return gulp.src('dist/**')
       .pipe(manifest({
         version: '1.2',
-        courseId: 'infi-2023-003',
-        SCOtitle: 'FEBRABAN - ESG',
-        moduleTitle: 'FEBRABAN - ESG',
+        courseId: 'infi-2023-006',
+        SCOtitle: 'FEBRABAN - CDC',
+        moduleTitle: 'FEBRABAN - CDC',
         launchPage: 'index.html',
         //path: 'dist',
         fileName: 'imsmanifest.xml'
@@ -136,9 +136,9 @@ gulp.task('manifestfinal', ['html', 'fonts', 'otherfinal', 'copyJS', 'tinypng'],
     return gulp.src('dist/**')
       .pipe(manifest({
         version: '1.2',
-        courseId: 'infi-2023-003',
-        SCOtitle: 'FEBRABAN - ESG',
-        moduleTitle: 'FEBRABAN - ESG',
+        courseId: 'infi-2023-006',
+        SCOtitle: 'FEBRABAN - CDC',
+        moduleTitle: 'FEBRABAN - CDC',
         launchPage: 'index.html',
         //path: 'dist',
         fileName: 'imsmanifest.xml'
@@ -159,14 +159,14 @@ gulp.task('copyJS', function () {
 gulp.task('zip',['manifest'], function () {
   return gulp.src('dist/**')
     //.pipe(wait(1000))
-    .pipe(zip('infi-2023-003_scorm.zip'))
+    .pipe(zip('infi-2023-006_scorm.zip'))
     .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('zipfinal',['manifestfinal'], function () {
   return gulp.src('dist/**')
     //.pipe(wait(1000))
-    .pipe(zip('infi-2023-003_scorm.zip'))
+    .pipe(zip('infi-2023-006_scorm.zip'))
     .pipe(gulp.dest('dist/'));
 });
 
