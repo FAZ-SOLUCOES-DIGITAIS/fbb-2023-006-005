@@ -7,7 +7,7 @@
 
   function routeConfig($stateProvider, $urlRouterProvider, MODULES) {
 
-    var showRoutes = true;
+    var showRoutes = false;
 
     if(showRoutes){
       $stateProvider
