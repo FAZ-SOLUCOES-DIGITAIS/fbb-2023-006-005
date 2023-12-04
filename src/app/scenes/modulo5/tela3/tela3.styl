@@ -140,3 +140,129 @@
 @media only screen and (orientation:portrait)
   .tela.mod5tela3
     position relative
+
+    .nav-buttons
+      .nav-button
+        &.prev
+          left 0
+
+        &.next
+          right 0
+
+
+
+    .screen
+      &.screen-0
+        display block
+        &.bg-0
+          background #fff
+        &.bg-1
+          background #fff
+        &.bg-2
+          background #fff
+
+        // .items
+        //   .nav-buttons-mobile
+        //     position absolute
+        //     width 100%
+        //     left 0
+        //     top 50%
+
+
+        //     .nav-button
+        //       position absolute
+        //       top 50%
+        //       transform translateY(-50%)
+
+        //       img
+        //         max-height 2.5rem
+
+        //       &.prev
+        //         left 0
+
+        //       &.next
+        //         right 0
+
+        .img-mobile
+          display block
+          position relative
+          top 0
+          width 100%
+          z-index -1
+          height 40vh
+          height 40svh
+
+          &.bg-0
+            background url('../assets/images/mod5/imagens/imagem_05.png')
+            background-color #fff
+            background-size cover
+            background-position left 96% bottom 50%
+            background-repeat no-repeat
+            padding 0
+            //background #000
+          &.bg-1
+            background url('../assets/images/mod5/imagens/imagem_06.png')
+            background-color #fff
+            background-size cover
+            background-position left 96% bottom 50%
+            background-repeat no-repeat
+            padding 0
+            //background #000
+          &.bg-2
+            background url('../assets/images/mod5/imagens/imagem_07.png')
+            background-color #fff
+            background-size cover
+            background-position left 96% bottom 50%
+            background-repeat no-repeat
+            padding 0
+            //background #000
+
+            // &:after
+            //   content ""
+            //   position absolute
+            //   left 0
+            //   bottom 0
+            //   width 50%//calc((100% / 12) * 1)
+            //   height calc(90%)
+            //   background url(../assets/images/mod5/imagens/imagem_04.png)
+            //   background-size contain
+            //   background-position center bottom
+            //   background-repeat no-repeat
+            //   pointer-events none
+
+          &:after
+            content ""
+            width 45%//calc((100% / 12) * 1)
+            height calc(100%)
+            position absolute
+            left 0
+            top 0
+            background url(../assets/images/mod5/grafismos/grafismo_03.png)
+            background-size contain
+            background-position left top
+            background-repeat no-repeat
+            pointer-events none
+
+          &:before
+            content ""
+            width 45%//calc((100% / 12) * 1)
+            position absolute
+            right 0
+            bottom 0
+            height calc(100%)
+            background url(../assets/images/mod5/grafismos/grafismo_01.png)
+            background-size contain
+            background-position left top
+            background-repeat no-repeat
+            pointer-events none
+            transform rotate(180deg)
+            padding 0
+
+
+
+        &:after
+          display none
+
+        &:before
+          display none
+
