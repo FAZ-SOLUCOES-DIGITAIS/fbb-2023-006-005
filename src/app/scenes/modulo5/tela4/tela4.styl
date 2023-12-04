@@ -26,36 +26,6 @@
         padding 0
         //background #000
 
-      // &:after
-      //   content ""
-      //   position absolute
-      //   left 0
-      //   top 0
-      //   z-index -3
-      //   border 1px solid red
-      //   width 50%//calc((100% / 12) * 1)
-      //   height calc(100%)
-      //   background url(../assets/images/mod5/grafismos/grafismo_01.png)
-      //   background-size contain
-      //   background-position left top
-      //   background-repeat no-repeat
-      //   pointer-events none
-
-      // &:before
-      //   content ""
-      //   position absolute
-      //   right 0
-      //   bottom 0
-      //   width 30%//calc((100% / 12) * 1)
-      //   height calc(100%)
-      //   background url(../assets/images/mod5/grafismos/grafismo_01.png)
-      //   background-size contain
-      //   background-position left top
-      //   background-repeat no-repeat
-      //   pointer-events none
-      //   transform rotate(180deg)
-      //   padding 0
-
 
   .items
 
@@ -119,6 +89,17 @@
 @media only screen and (orientation:portrait)
   .tela.mod5tela4
     position relative
+
+    .screen
+      .items
+        transform translateY(50%)
+
+      &.screen-0
+        &.bg-0
+          background-position top right
+
+        &.bg-1
+          background-position top right
 
     .nav-buttons
       .nav-button
