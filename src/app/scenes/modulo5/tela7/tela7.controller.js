@@ -14,6 +14,7 @@
     $timeout(function(){
       Game.data.currentModule = 4;
       Game.data.currentScreen = 6;
+      Game.finishScreen();
     })
 
     vm.next = function(){

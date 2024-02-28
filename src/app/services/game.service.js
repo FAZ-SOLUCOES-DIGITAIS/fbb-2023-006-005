@@ -14,7 +14,7 @@
       game.progress = [];
       game.modules = MODULES;
 
-      game.unlock = true;
+      game.unlock = false;
 
       game.feedClient = 0;
 

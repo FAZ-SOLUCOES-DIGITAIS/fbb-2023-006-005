@@ -6,86 +6,98 @@ $navbar-inverse-link-color = #5AADBB
 $icon-font-path = "../../bootstrap-stylus/fonts/"
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-Black.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-Black.otf')
   font-weight 900
   font-style normal
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-BlackItalic.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-BlackOblique.otf')
   font-weight 900
   font-style italic
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-Bold.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-Bold.otf')
   font-weight bold
   font-style normal
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-BoldItalic.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-BoldOblique.otf')
   font-weight bold
   font-style italic
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-ExtraBold.ttf')
-  font-weight 800
+  font-family "Elza"
+  src url('../assets/fonts/Elza-Extralight.otf')
+  font-weight 250
   font-style normal
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-ExtraBoldItalic.ttf')
-  font-weight 800
+  font-family "Elza"
+  src url('../assets/fonts/Elza-ExtralightOblique.otf')
+  font-weight 250
   font-style italic
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-Light.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-Light.otf')
   font-weight 200
   font-style normal
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-LightItalic.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-LightObliquec.otf')
   font-weight 200
   font-style italic
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-Medium.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-Medium.otf')
   font-weight 400
   font-style normal
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-MediumItalic.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-MediumOblique.otf')
   font-weight 400
   font-style italic
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-Regular.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-Regular.otf')
   font-weight 300
   font-style normal
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-RegularItalic.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-Oblique.otf')
   font-weight 300
   font-style italic
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-Thin.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-Semibold.otf')
+  font-weight 800
+  font-style normal
+
+@font-face
+  font-family "Elza"
+  src url('../assets/fonts/Elza-SemiboldOblique.otf')
+  font-weight 800
+  font-style italic
+
+@font-face
+  font-family "Elza"
+  src url('../assets/fonts/Elza-Thin.otf')
   font-weight 100
   font-style normal
 
 @font-face
-  font-family "Barlow"
-  src url('../assets/fonts/Barlow-ThinItalic.ttf')
+  font-family "Elza"
+  src url('../assets/fonts/Elza-ThinOblique.otf')
   font-weight 100
   font-style italic
 
@@ -158,10 +170,6 @@ ul li{
   margin-bottom: 0.6rem;
 }
 
-p{
-  word-break break-word
-}
-
 *
   box-sizing border-box
 
@@ -176,7 +184,7 @@ html, body
   //height 100%
   //height -webkit-fill-available
   //height stretch
-  font-family "Barlow", sans-serif
+  font-family "Elza", sans-serif
   font-size 16px
   font-weight 300
 
@@ -565,12 +573,57 @@ body
 
   .box-btn
     padding 0.5rem 2rem
+    &[ng-click]
+      transition transform 0.3s
+      &:hover
+        transform scale(1.05)
   .box-small
     padding 0.8rem 1.2rem
+    &[ng-click]
+      transition transform 0.3s
+      &:hover
+        transform scale(1.05)
   .box-normal
     padding 1rem 1.5rem
+    &[ng-click]
+      transition transform 0.3s
+      &:hover
+        transform scale(1.05)
   .box-big
     padding 2rem 2.5rem
+    &[ng-click]
+      transition transform 0.3s
+      &:hover
+        transform scale(1.05)
+
+  .btn-like
+    &[ng-click]
+      transition transform 0.3s
+      &:hover
+        transform scale(1.05)
+
+
+  .click-items
+    .click-item
+      animation 1s pulse infinite
+
+      &.completed
+        animation unset
+
+      &.current
+        animation unset
+
+  .nav-buttons
+    .nav-button
+      transition transform 0.3s
+      box-shadow 2px 2px 5px 1px rgba(0,0,0,0.35)
+      &:hover
+        transform translateY(-50%) scale(1.1) !important
+
+    /*.nav-right
+      transition transform 0.3s
+      &:hover
+        transform translateY(-50%) scale(1.1)*/
 
   .flex
     display flex

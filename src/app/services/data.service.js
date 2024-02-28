@@ -23,7 +23,7 @@
       data.success_score = 0.7;
 
       data.data = {
-        version: "0.1",
+        version: "0.6",
         currentTry:0,
         currentModule:0,
         currentScreen:0,
@@ -36,22 +36,22 @@
         telas: {},
         trilhas:{
           trilha1:{
-            completed:false
+            completed:true
           },
           trilha2:{
-            completed:false
+            completed:true
           },
           trilha3:{
-            completed:false
+            completed:true
           },
           trilha4:{
-            completed:false
+            completed:true
           },
           trilha5:{
             completed:false
           },
           trilha6:{
-            completed:false
+            completed:true
           }
         },
         outros: {
