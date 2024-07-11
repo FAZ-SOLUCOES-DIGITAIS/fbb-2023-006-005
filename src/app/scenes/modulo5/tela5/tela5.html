@@ -20,7 +20,7 @@
           <div class="bg-grafismo04"></div>
         </div>
 
-        <div class="col-xs-12 col-sm-7 bg-black quizz flex">
+        <div class="col-xs-12 col-sm-7 bg-black quizz flex flex-column flex-justify">
           <div class="grid-template-columns-3 small">
             <div class="item click-item subtitle extrabold bg-white" ng-click="vm.selectQuiz(0, 1, 0)"
               ng-class="{selected: vm.currentItem[0] === 0, correct: vm.quiz[0].selected === 1, wrong: vm.quiz[0].selected === 0}">
@@ -63,7 +63,16 @@
               </p>
             </div>
           </div>
+          <div class="center mt-3" style="min-height: 2rem;">
+            <div ng-if="vm.quiz[0].selected !== -1 && !vm.quiz[0].completed && vm.quiz[1].selected !== -1 && !vm.quiz[1].completed && vm.quiz[2].selected !== -1 && !vm.quiz[2].completed" class="inline-block-middle bg-blue box-btn" ng-click="vm.redo()">
+              Refazer
+            </div>
+            <p ng-if="vm.quiz[0].selected !== -1 && vm.quiz[0].completed && vm.quiz[1].selected !== -1 && vm.quiz[1].completed && vm.quiz[2].selected !== -1 && vm.quiz[2].completed" class="center small white">
+              Clique na seta lateral para avançar
+            </p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>

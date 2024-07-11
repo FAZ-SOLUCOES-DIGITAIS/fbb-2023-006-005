@@ -576,6 +576,7 @@ body
     &[ng-click]
       transition transform 0.3s
       &:hover
+        transition none
         transform scale(1.05)
   .box-small
     padding 0.8rem 1.2rem
@@ -616,7 +617,7 @@ body
   .nav-buttons
     .nav-button
       transition transform 0.3s
-      box-shadow 2px 2px 5px 1px rgba(0,0,0,0.35)
+      // box-shadow 2px 2px 5px 1px rgba(0,0,0,0.35)
       &:hover
         transform translateY(-50%) scale(1.1) !important
 

@@ -96,9 +96,8 @@
       }
     }
 
-
     vm.selectQuiz = function (idQuiz, selectedItem, item, callback, scroll) {
-      // if(vm.quiz[id].completed) return;
+      if(vm.quiz[idQuiz].completed) return;
 
       $timeout(function () {
         vm.currentItem[idQuiz] = item;
@@ -116,11 +115,18 @@
         vm.checkAfterSelect(callback, scroll);
       })
 
+      console.log(vm.quiz, vm.items)
+
       // vm.checkAfterSelect(callback, scroll);
       // vm.finishQuiz(idQuiz, callback, scroll)
       // })
     }
 
+    vm.redo = function() {
+      vm.quiz[0].selected = -1
+      vm.quiz[1].selected = -1
+      vm.quiz[2].selected = -1
+    }
 
     vm.finishQuiz = function (id, callback, scroll) {
       if (vm.quiz[id].selected === -1) return;
@@ -162,7 +168,6 @@
         behavior: 'smooth'
       });
     }
-
 
     vm.finish = function () {
       Game.finishScreen();
