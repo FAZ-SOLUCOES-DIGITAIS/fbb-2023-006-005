@@ -98,17 +98,17 @@
 
     vm.selectQuiz = function (idQuiz, selectedItem, item, callback, scroll) {
       if(vm.quiz[idQuiz].completed) return;
+      if(vm.quiz[idQuiz].selected !== -1) return;
 
       $timeout(function () {
         vm.currentItem[idQuiz] = item;
 
         vm.quiz[idQuiz].selected = selectedItem;
 
-
         if (vm.quiz[idQuiz].selected === 1 && !vm.quiz[idQuiz].completed) {
           vm.items[idQuiz] = [true, true];
-          vm.quiz[idQuiz].points += 1;
           vm.quiz[idQuiz].completed = true;
+          vm.quiz[idQuiz].points += 1;
         }
         // }
 
@@ -123,9 +123,27 @@
     }
 
     vm.redo = function() {
-      vm.quiz[0].selected = -1
-      vm.quiz[1].selected = -1
-      vm.quiz[2].selected = -1
+      vm.items[0] = [false,false]
+      vm.items[1] = [false,false]
+      vm.items[2] = [false,false]
+      vm.quiz[0] = {
+        selected: -1,
+        completed: false,
+        answer: 1,
+        points: 0
+      }
+      vm.quiz[1] = {
+        selected: -1,
+        completed: false,
+        answer: 1,
+        points: 0
+      }
+      vm.quiz[2] = {
+        selected: -1,
+        completed: false,
+        answer: 1,
+        points: 0
+      }
     }
 
     vm.finishQuiz = function (id, callback, scroll) {
