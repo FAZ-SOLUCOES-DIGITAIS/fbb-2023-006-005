@@ -102,12 +102,11 @@
 
       $timeout(function () {
         vm.currentItem[idQuiz] = item;
-
         vm.quiz[idQuiz].selected = selectedItem;
+        vm.quiz[idQuiz].completed = true;
 
-        if (vm.quiz[idQuiz].selected === 1 && !vm.quiz[idQuiz].completed) {
+        if (vm.quiz[idQuiz].selected === 1) {
           vm.items[idQuiz] = [true, true];
-          vm.quiz[idQuiz].completed = true;
           vm.quiz[idQuiz].points += 1;
         }
         // }

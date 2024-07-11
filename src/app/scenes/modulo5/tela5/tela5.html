@@ -64,10 +64,10 @@
             </div>
           </div>
           <div class="center mt-3" style="min-height: 2rem;">
-            <div ng-if="vm.quiz[0].selected !== -1 && !vm.quiz[0].completed || vm.quiz[1].selected !== -1 && !vm.quiz[1].completed || vm.quiz[2].selected !== -1 && !vm.quiz[2].completed" class="inline-block-middle bg-blue box-btn" ng-click="vm.redo()">
+            <div ng-if="vm.quiz[0].points + vm.quiz[1].points + vm.quiz[2].points !== 3 && vm.quiz[0].completed && vm.quiz[1].completed && vm.quiz[2].completed" class="inline-block-middle bg-blue box-btn" ng-click="vm.redo()">
               Refazer
             </div>
-            <p ng-if="vm.quiz[0].selected !== -1 && vm.quiz[0].completed && vm.quiz[1].selected !== -1 && vm.quiz[1].completed && vm.quiz[2].selected !== -1 && vm.quiz[2].completed" class="center small white">
+            <p ng-if="vm.quiz[0].points + vm.quiz[1].points + vm.quiz[2].points === 3 && vm.quiz[0].completed && vm.quiz[1].completed && vm.quiz[2].completed"  class="center small white">
               Clique na seta lateral para avançar
             </p>
           </div>
